@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pokedex/app/const/app_images.dart';
 
+/// PokedexBar
+///
+/// Widget that displays an image.
 class PokedexBar extends StatelessWidget {
   const PokedexBar({super.key});
   @override

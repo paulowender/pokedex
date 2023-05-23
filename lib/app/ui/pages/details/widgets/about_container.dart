@@ -6,6 +6,9 @@ import 'package:pokedex/app/const/app_texts.dart';
 import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
 
+/// Image Card
+///
+/// Widget that displays details about a pokemon.
 class AboutContainer extends GenericContainer {
   const AboutContainer({super.key, required super.size});
 

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/app/const/app_images.dart';
 import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
 
+/// Navigation Container
+///
+/// Widget that displays navigation buttons
 class NavigationContainer extends GenericContainer {
   const NavigationContainer({super.key, required super.size});
 

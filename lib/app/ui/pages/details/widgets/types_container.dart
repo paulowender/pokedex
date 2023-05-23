@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
 import 'package:pokedex/app/ui/pages/details/widgets/type_card.dart';
 
+/// TypeCard
+///
+/// Widget that displays a list of types
 class TypesContainer extends GenericContainer {
   const TypesContainer({super.key, required super.size});
 

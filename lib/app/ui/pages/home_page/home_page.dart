@@ -5,6 +5,10 @@ import 'package:pokedex/app/ui/pages/home_page/widgets/pokedex_bar.dart';
 import 'package:pokedex/app/ui/pages/home_page/widgets/pokemon_card.dart';
 import 'package:pokedex/app/ui/pages/home_page/widgets/search_bar.dart';
 
+/// Home Page
+///
+/// Page that shows the list of pokemons
+
 class HomePage extends GetView<HomeController> {
   const HomePage({super.key});
 

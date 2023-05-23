@@ -6,6 +6,9 @@ import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/controllers/home_controller.dart';
 import 'package:pokedex/app/ui/pages/home_page/widgets/sort_card.dart';
 
+/// PokemonCard
+///
+/// Widget that displays a field with a search bar.
 class SearchField extends GetView<HomeController> {
   const SearchField({super.key});
 

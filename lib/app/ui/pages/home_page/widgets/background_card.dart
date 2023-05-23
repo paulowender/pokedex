@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/app/const/app_themes.dart';
 
+/// BackgroundCardHome
+///
+/// Widget to display a background card of the list items.
 class BackgroundCardHome extends StatelessWidget {
   const BackgroundCardHome({super.key});
   @override

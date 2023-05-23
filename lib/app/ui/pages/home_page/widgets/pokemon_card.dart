@@ -6,6 +6,9 @@ import 'package:pokedex/app/data/models/pokemon.dart';
 import 'package:pokedex/app/ui/pages/home_page/widgets/background_card.dart';
 import 'package:pokedex/app/ui/pages/home_page/widgets/image_card.dart';
 
+/// PokemonCard
+///
+/// Widget that displays a list item.
 class PokemonCard extends StatelessWidget {
   final int index;
   final Pokemon pokemon;

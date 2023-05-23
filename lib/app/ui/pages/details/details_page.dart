@@ -8,6 +8,9 @@ import 'package:pokedex/app/ui/pages/details/widgets/image_container.dart';
 import 'package:pokedex/app/ui/pages/details/widgets/navigation_container.dart';
 import 'package:pokedex/app/ui/pages/details/widgets/top_bar.dart';
 
+/// DetailsPage
+///
+/// Page to show details of a pokemon.
 class DetailsPage extends GetView<HomeController> {
   const DetailsPage({super.key});
 

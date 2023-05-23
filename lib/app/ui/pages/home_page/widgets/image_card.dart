@@ -1,6 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+/// ImageCard
+///
+/// Widget that displays an image.
 class ImageCard extends StatelessWidget {
   final String image;
   const ImageCard({super.key, required this.image});

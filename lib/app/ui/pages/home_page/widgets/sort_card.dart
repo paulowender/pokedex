@@ -5,10 +5,9 @@ import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/const/sorting_option.dart';
 import 'package:pokedex/app/controllers/home_controller.dart';
 
-enum Fruit { apple, banana }
-
-Fruit? _fruit = Fruit.apple;
-
+/// SortCard
+///
+/// Widget that displays a sort option.
 class SortCard extends GetView<HomeController> {
   const SortCard({super.key});
   @override
@@ -80,6 +79,7 @@ class SortCard extends GetView<HomeController> {
     );
   }
 
+  /// Returns an option row.
   Widget _option<T>(
     String title, {
     required T value,

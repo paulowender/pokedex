@@ -5,6 +5,9 @@ import 'package:pokedex/app/const/app_texts.dart';
 import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
 
+/// Base stats container
+///
+/// Widget that displays base stats list of pokemon.
 class BaseStatsContainer extends GenericContainer {
   const BaseStatsContainer({super.key, required super.size});
 

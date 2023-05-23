@@ -5,6 +5,9 @@ import 'package:pokedex/app/const/app_images.dart';
 import 'package:pokedex/app/const/app_texts.dart';
 import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
 
+/// TopBar
+///
+/// Widget that shows the top bar of the screen.
 class TopBar extends GenericContainer {
   const TopBar({super.key, required super.size});
 

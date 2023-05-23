@@ -3,6 +3,9 @@ import 'package:pokedex/app/const/app_images.dart';
 import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
 
+/// Back Container
+///
+/// Widget that displays a pokeball at the top of the screen.
 class BackContainer extends GenericContainer {
   const BackContainer({super.key, required super.size});
 

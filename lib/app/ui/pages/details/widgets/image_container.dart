@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
 
+/// Image Container
+///
+/// Widget that displays an image.
 class ImageContainer extends GenericContainer {
   const ImageContainer({super.key, required super.size});
 
@@ -12,8 +15,7 @@ class ImageContainer extends GenericContainer {
       () => CachedNetworkImage(
         imageUrl: controller.selectedPokemon.value.image,
         fit: BoxFit.cover,
-        width: 200,
-        height: 200,
+        width: size.width * 0.54,
       ),
     );
   }

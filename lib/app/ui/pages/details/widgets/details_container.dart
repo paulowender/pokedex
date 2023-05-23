@@ -5,6 +5,9 @@ import 'package:pokedex/app/ui/pages/details/widgets/about_container.dart';
 import 'package:pokedex/app/ui/pages/details/widgets/base_stats_container.dart';
 import 'package:pokedex/app/ui/pages/details/widgets/types_container.dart';
 
+/// Details Container
+///
+/// Widget that displays all details of a pokemon.
 class DetailsContainer extends GenericContainer {
   const DetailsContainer({super.key, required super.size});
 
