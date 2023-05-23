@@ -12,10 +12,13 @@ class ImageContainer extends GenericContainer {
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => CachedNetworkImage(
-        imageUrl: controller.selectedPokemon.value.image,
-        fit: BoxFit.cover,
-        width: size.width * 0.54,
+      () => Hero(
+        tag: controller.selectedPokemon.value.image,
+        child: CachedNetworkImage(
+          imageUrl: controller.selectedPokemon.value.image,
+          fit: BoxFit.cover,
+          width: size.width * 0.54,
+        ),
       ),
     );
   }
