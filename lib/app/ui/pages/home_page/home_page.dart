@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pokedex/app/controllers/home_controller.dart';
-import 'package:pokedex/app/ui/global_widgets/pokedex_bar.dart';
-import 'package:pokedex/app/ui/global_widgets/pokemon_card.dart';
-import 'package:pokedex/app/ui/global_widgets/search_bar.dart';
+import 'package:pokedex/app/ui/pages/home_page/widgets/pokedex_bar.dart';
+import 'package:pokedex/app/ui/pages/home_page/widgets/pokemon_card.dart';
+import 'package:pokedex/app/ui/pages/home_page/widgets/search_bar.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('Width: ${MediaQuery.of(context).size.width}');
-    debugPrint('Height: ${MediaQuery.of(context).size.height}');
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(4),
@@ -51,8 +49,10 @@ class HomePage extends GetView<HomeController> {
                     itemBuilder: (context, index) => PokemonCard(
                       index: index,
                       pokemon: controller.pokemons[index],
-                      onTap: () =>
-                          controller.goToDetails(controller.pokemons[index]),
+                      onTap: () => controller.goToDetails(
+                        controller.pokemons[index],
+                        index,
+                      ),
                     ),
                   );
                 }),

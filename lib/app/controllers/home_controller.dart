@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pokedex/app/const/sorting_option.dart';
+import 'package:pokedex/app/data/models/pokemon_details.dart';
 import 'package:pokedex/app/data/service/pokedex_service.dart';
 import 'package:pokedex/app/routes/pages.dart';
 
@@ -16,14 +18,21 @@ class HomeController extends GetxController {
   int offset = 0;
 
   // Ordenando por nome
-  bool sortingByName = false;
+  Rx<SortOption> sortingOption = SortOption.number.obs;
+  bool get sortingByName => sortingOption.value == SortOption.name;
 
   // Lista de pokemons
   final List<Pokemon> _pokemons = [];
 
   // Pokemon selecionado para exibir detalhes
-  Rx<Pokemon> selectedPokemon =
-      Pokemon(id: '000', name: 'Pokemon', url: '').obs;
+  Rx<Pokemon> selectedPokemon = Pokemon(
+    id: '000',
+    name: 'Pokemon',
+    url: '',
+  ).obs;
+  Rx<PokemonDetails> details = PokemonDetails.empty().obs;
+  bool get isFirst => _pokemons.first.id == selectedPokemon.value.id;
+  bool get isLast => _pokemons.last.id == selectedPokemon.value.id;
 
   // Getter para lista de pokemons
   List<Pokemon> get pokemons => searchController.text.isEmpty
@@ -63,12 +72,14 @@ class HomeController extends GetxController {
   // Ordena a lista de pokemons por nome
   void sortByName() {
     _pokemons.sort((a, b) => a.name.compareTo(b.name));
+    sortingOption.value = SortOption.name;
     update();
   }
 
   // Ordena a lista de pokemons por numero
   void sortByNumber() {
     _pokemons.sort((a, b) => a.id.compareTo(b.id));
+    sortingOption.value = SortOption.number;
     update();
   }
 
@@ -79,13 +90,28 @@ class HomeController extends GetxController {
     } else {
       sortByName();
     }
-    sortingByName = !sortingByName;
   }
 
-  void goToDetails(Pokemon pokemon) async {
+  void goToDetails(Pokemon pokemon, int index, {bool openScreen = true}) async {
     selectedPokemon.value = pokemon;
+    details.value = await PokedexService.getDetails(pokemon);
+    if (openScreen) {
+      Get.toNamed(Routes.DETAILS, arguments: index);
+    }
+  }
 
-    Get.toNamed(Routes.DETAILS, arguments: pokemon);
+  void toPreviousPokemon() {
+    final index = _pokemons.indexOf(selectedPokemon.value);
+    if (index > 0) {
+      goToDetails(_pokemons[index - 1], index, openScreen: false);
+    }
+  }
+
+  void toNextPokemon() {
+    final index = _pokemons.indexOf(selectedPokemon.value);
+    if (index < _pokemons.length - 1) {
+      goToDetails(_pokemons[index + 1], index, openScreen: false);
+    }
   }
 
   @override

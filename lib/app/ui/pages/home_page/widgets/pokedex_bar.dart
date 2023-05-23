@@ -7,7 +7,7 @@ class PokedexBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 16.0, left: 16.12, right: 16.12),
+      padding: const EdgeInsets.only(top: 10, left: 12, right: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,

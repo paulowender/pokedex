@@ -1,4 +1,5 @@
 import 'package:pokedex/app/data/models/pokemon.dart';
+import 'package:pokedex/app/data/models/pokemon_details.dart';
 import 'package:pokedex/app/data/provider/pokedex.dart';
 
 class PokedexService {
@@ -26,5 +27,15 @@ class PokedexService {
 
     // Retorna a lista de pokemons
     return pokemons;
+  }
+
+  static Future<PokemonDetails> getDetails(Pokemon pokemon) async {
+    var response = await pokedexApi.getDetails(int.parse(pokemon.id));
+
+    // Verifica se a requisição foi bem sucedida
+    if (response.statusCode == 200) {
+      return PokemonDetails.fromJson(response.body);
+    }
+    return PokemonDetails.empty();
   }
 }

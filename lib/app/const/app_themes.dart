@@ -8,6 +8,7 @@ class AppThemes {
   static const Color greyscaleWireframe = Color(0xFFB8B8B8);
   static const Color greyscaleMedium = Color(0xFF666666);
   static const Color greyscaleDark = Color(0xFF212121);
+  static const Color greyscaleDarkText = Color(0xFF1D1D1D);
 
   static const Map<int, Color> color = {
     50: primary,

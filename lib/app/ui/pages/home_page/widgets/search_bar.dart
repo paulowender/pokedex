@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pokedex/app/const/app_images.dart';
+import 'package:pokedex/app/const/app_texts.dart';
 import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/controllers/home_controller.dart';
+import 'package:pokedex/app/ui/pages/home_page/widgets/sort_card.dart';
 
 class SearchBar extends GetView<HomeController> {
   const SearchBar({super.key});
@@ -11,7 +12,7 @@ class SearchBar extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       child: SizedBox(
         height: 32,
         child: GetBuilder<HomeController>(builder: (controller) {
@@ -22,31 +23,32 @@ class SearchBar extends GetView<HomeController> {
               Expanded(
                 child: TextField(
                   controller: controller.searchController,
+                  style: AppTexts.body3,
                   decoration: InputDecoration(
                     hintText: 'Search',
-                    hintStyle: GoogleFonts.poppins(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    fillColor: Colors.white,
+                    hintStyle: AppTexts.body3,
+                    fillColor: AppThemes.white,
                     filled: true,
                     prefixIcon: const Icon(
                       Icons.search,
                       color: AppThemes.primary,
-                      size: 12,
+                      size: 16,
                     ),
                     suffixIcon: controller.searchController.text.isEmpty
                         ? null
                         : IconButton(
                             icon: const Icon(
                               Icons.clear,
-                              size: 9,
+                              size: 16,
+                              color: AppThemes.primary,
                             ),
                             onPressed: controller.searchController.clear,
                           ),
-                    contentPadding: const EdgeInsets.symmetric(
-                      vertical: 8,
-                      horizontal: 4,
+                    contentPadding: const EdgeInsets.only(
+                      left: 10,
+                      right: 16,
+                      top: 8,
+                      bottom: 8,
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(16),
@@ -55,10 +57,12 @@ class SearchBar extends GetView<HomeController> {
                   ),
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 16),
               InkWell(
-                onTap: controller.sort,
-                // onTap: () => Get.dialog(const SortCard()),
+                // onTap: controller.sort,
+                onTap: () {
+                  _showAlertDialog(context);
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
@@ -78,6 +82,17 @@ class SearchBar extends GetView<HomeController> {
           );
         }),
       ),
+    );
+  }
+
+  void _showAlertDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const Center(
+          child: SortCard(),
+        );
+      },
     );
   }
 }
