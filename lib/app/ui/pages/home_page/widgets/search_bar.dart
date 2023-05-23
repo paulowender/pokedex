@@ -92,8 +92,8 @@ class SearchField extends GetView<HomeController> {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return const Center(
-          child: SortCard(),
+        return Center(
+          child: SortCard(size: MediaQuery.of(context).size),
         );
       },
     );
