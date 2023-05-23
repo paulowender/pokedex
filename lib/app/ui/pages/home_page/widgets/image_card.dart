@@ -17,13 +17,16 @@ class ImageCard extends StatelessWidget {
           right: 16,
           bottom: 20,
         ),
-        child: CachedNetworkImage(
-          imageUrl: image,
-          width: 72,
-          height: 72,
-          progressIndicatorBuilder: (context, url, downloadProgress) =>
-              CircularProgressIndicator(value: downloadProgress.progress),
-          errorWidget: (context, url, error) => const Icon(Icons.error),
+        child: Hero(
+          tag: image,
+          child: CachedNetworkImage(
+            imageUrl: image,
+            width: 72,
+            height: 72,
+            progressIndicatorBuilder: (context, url, downloadProgress) =>
+                CircularProgressIndicator(value: downloadProgress.progress),
+            errorWidget: (context, url, error) => const Icon(Icons.error),
+          ),
         ),
       ),
     );

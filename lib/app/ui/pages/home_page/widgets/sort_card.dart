@@ -3,18 +3,18 @@ import 'package:get/get.dart';
 import 'package:pokedex/app/const/app_texts.dart';
 import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/const/sorting_option.dart';
-import 'package:pokedex/app/controllers/home_controller.dart';
+import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
 
 /// SortCard
 ///
 /// Widget that displays a sort option.
-class SortCard extends GetView<HomeController> {
-  const SortCard({super.key});
+class SortCard extends GenericContainer {
+  const SortCard({super.key, required super.size});
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 113,
-      height: 132,
+      width: size.width * 0.3,
+      height: size.height * 0.2,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
@@ -101,7 +101,7 @@ class SortCard extends GetView<HomeController> {
               (states) => AppThemes.primary,
             ),
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 4),
           Text(
             title,
             style: AppTexts.body3,
