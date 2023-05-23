@@ -6,8 +6,8 @@ import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/controllers/home_controller.dart';
 import 'package:pokedex/app/ui/pages/home_page/widgets/sort_card.dart';
 
-class SearchBar extends GetView<HomeController> {
-  const SearchBar({super.key});
+class SearchField extends GetView<HomeController> {
+  const SearchField({super.key});
 
   @override
   Widget build(BuildContext context) {

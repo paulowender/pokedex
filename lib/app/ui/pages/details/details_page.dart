@@ -15,27 +15,30 @@ class DetailsPage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Obx(
-      () => Material(
-        color: controller.details.value.types.first.color ??
-            AppThemes.greyscaleWireframe,
-        child: Stack(
-          children: [
-            // Background Container
-            BackContainer(size: size),
-            // Details Card
-            DetailsContainer(size: size),
-            // Navigation bottons
-            NavigationContainer(size: size),
-            // Column with Top Bar and Image
-            Column(
-              children: [
-                // App Bar
-                TopBar(size: size),
-                // Image
-                ImageContainer(size: size),
-              ],
-            )
-          ],
+      () => Padding(
+        padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+        child: Material(
+          color: controller.details.value.types.first.color ??
+              AppThemes.greyscaleWireframe,
+          child: Stack(
+            children: [
+              // Background Container
+              BackContainer(size: size),
+              // Details Card
+              DetailsContainer(size: size),
+              // Navigation bottons
+              NavigationContainer(size: size),
+              // Column with Top Bar and Image
+              Column(
+                children: [
+                  // App Bar
+                  TopBar(size: size),
+                  // Image
+                  ImageContainer(size: size),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

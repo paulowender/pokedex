@@ -20,7 +20,6 @@ class PokemonCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return BackCard(image: pokemon.image);
     return InkWell(
       onTap: onTap,
       child: Padding(
@@ -65,77 +64,5 @@ class PokemonCard extends StatelessWidget {
         ]),
       ),
     );
-    // child: Container(
-    //   margin: const EdgeInsets.all(4),
-    //   decoration: BoxDecoration(
-    //     borderRadius: BorderRadius.circular(8),
-    //     color: Colors.white,
-    //     boxShadow: [
-    //       BoxShadow(
-    //         color: Colors.black.withOpacity(0.2),
-    //         spreadRadius: 2,
-    //         blurRadius: 2,
-    //         offset: const Offset(0, 3),
-    //       )
-    //     ],
-    //   ),
-    //   padding: const EdgeInsets.only(top: 4),
-    //   child: Stack(
-    //     children: [
-    //       Positioned(
-    //         bottom: 0,
-    //         left: 0,
-    //         right: 0,
-    //         child: Container(
-    //           // height: 44,
-    //           decoration: const BoxDecoration(
-    //             // color: AppThemes.greyscaleBackground,
-    //             borderRadius: BorderRadius.all(Radius.circular(8)),
-    //             gradient: LinearGradient(
-    //               begin: Alignment.topCenter,
-    //               end: Alignment.bottomCenter,
-    //               colors: [
-    //                 Colors.white,
-    //                 // AppThemes.white,
-    //                 AppThemes.greyscaleBackground,
-    //               ],
-    //               stops: [0.6, 0.0],
-    //             ),
-    //           ),
-    //         ),
-    //       ),
-    //       Padding(
-    //         padding: const EdgeInsets.only(left: 8, right: 8, bottom: 4),
-    //         child: Column(
-    //           crossAxisAlignment: CrossAxisAlignment.end,
-    //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //           children: [
-    //             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-    //               Text(
-    //                 '#${pokemon.id}',
-    //                 style: GoogleFonts.poppins(fontSize: 10),
-    //                 textAlign: TextAlign.end,
-    //               )
-    //             ]),
-    //             Row(
-    //               mainAxisAlignment: MainAxisAlignment.center,
-    //               children: [
-    //                 Text(
-    //                   pokemon.name,
-    //                   style: GoogleFonts.poppins(
-    //                     // fontSize: AppSizes.calcSize(10),
-    //                     fontWeight: FontWeight.w400,
-    //                   ),
-    //                   textAlign: TextAlign.center,
-    //                 )
-    //               ],
-    //             )
-    //           ],
-    //         ),
-    //       ),
-    //     ],
-    //   ),
-    // ),
-    // );
   }
 }

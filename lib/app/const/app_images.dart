@@ -1,8 +1,3 @@
-import 'dart:io';
-
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 class AppImages {
   static const String images = 'assets/images';
   static const String pokemons = '$images/pokemons';
@@ -18,22 +13,12 @@ class AppImages {
     // Monta o caminho da imagem
     String path = '$images/$name.png';
 
-    // Caso exista a imagem, retorna
-    if (GetPlatform.isWeb || File(path).existsSync()) {
-      return path;
-    }
-
-    // Caso não exista a imagem, retorna a imagem padrão
-    debugPrint('$path does not exist');
-    return pokemon;
+    return path;
   }
 
   // Função responsável por retornar uma imagem da pasta pokemons
   static String getPokemonImage(String id) {
     // Monta o caminho da imagem
-    String pokemonsPath = 'pokemons/$id';
-
-    // Retorna a imagem
-    return getImage(pokemonsPath);
+    return 'https://nexus.traction.one/images/pokemon/pokemon/$id.png';
   }
 }

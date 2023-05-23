@@ -12,12 +12,17 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(4),
+        padding: EdgeInsets.only(
+          top: MediaQuery.of(context).padding.top,
+          left: 4,
+          right: 4,
+          bottom: 4,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const PokedexBar(),
-            const SearchBar(),
+            const SearchField(),
             Expanded(
               child: Container(
                 decoration: const BoxDecoration(

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
@@ -8,10 +9,11 @@ class ImageContainer extends GenericContainer {
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => Image.asset(
-        controller.selectedPokemon.value.image,
+      () => CachedNetworkImage(
+        imageUrl: controller.selectedPokemon.value.image,
         fit: BoxFit.cover,
-        width: size.width * 0.65,
+        width: 200,
+        height: 200,
       ),
     );
   }

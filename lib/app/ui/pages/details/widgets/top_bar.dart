@@ -14,10 +14,10 @@ class TopBar extends GenericContainer {
       children: [
         Padding(
           padding: const EdgeInsets.only(
-            top: 20,
+            top: 24,
             left: 16,
             right: 24,
-            bottom: 8,
+            bottom: 24,
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ImageCard extends StatelessWidget {
@@ -13,8 +14,13 @@ class ImageCard extends StatelessWidget {
           right: 16,
           bottom: 20,
         ),
-        child: Image.asset(
-          image,
+        child: CachedNetworkImage(
+          imageUrl: image,
+          width: 72,
+          height: 72,
+          progressIndicatorBuilder: (context, url, downloadProgress) =>
+              CircularProgressIndicator(value: downloadProgress.progress),
+          errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
       ),
     );
