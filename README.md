@@ -1,6 +1,26 @@
-# pokedex
+# Pokédex - Desafio de Projeto SnapFi
 
-Aplicativo de listagem de pokemons construido em flutter para o desafio da SnapFi
+Aplicativo Flutter para listagem de pokemons e visualização de detalhes
+
+Foi utilizado conceitos como:
+* SOLID
+* Clean Arch
+* POO
+
+Packages utilizados:
+* GET - Gerência de estados e rotas
+* GoogleFonts - Fontes dos textos
+* Intl - Formatação de numeros para a exibição
+
+Desenvolvimento:
+ * Flutter stable, 3.7.8
+
+## Screenshots
+<p align="center">
+  <img src="screenshots\home.png" width="300" title="home">
+  <img src="screenshots\details-charmeleon.png" width="300" alt="details">
+  <img src="screenshots\details-mewtwo.png" width="300" alt="details">
+</p>
 
 ### Instalação
 * Clone este repositório
