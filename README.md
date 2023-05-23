@@ -17,7 +17,8 @@ Desenvolvimento:
 
 ## Screenshots
 <p align="center">
-  <img src="screenshots\home.png" width="300" title="home">
+  <img src="screenshots\home-number.png" width="300" title="home">
+  <img src="screenshots\home-name.png" width="300" title="home">
   <img src="screenshots\details-charmeleon.png" width="300" alt="details">
   <img src="screenshots\details-mewtwo.png" width="300" alt="details">
 </p>
