@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/app/const/app_themes.dart';
-import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/about_container.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/base_stats_container.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/types_container.dart';
+
+import '../../../const/app_themes.dart';
+import '../../../widget/generic_container.dart';
+import 'about_container.dart';
+import 'base_stats_container.dart';
+import 'types_container.dart';
 
 /// Details Container
 ///

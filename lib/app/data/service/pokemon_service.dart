@@ -1,12 +1,14 @@
-import 'package:pokedex/app/data/models/pokemon.dart';
-import 'package:pokedex/app/data/models/pokemon_details.dart';
-import 'package:pokedex/app/data/provider/pokedex.dart';
+import '../models/pokemon.dart';
+import '../models/pokemon_details.dart';
+import '../provider/pokemon_api.dart';
 
-class PokedexService {
-  static PokedexApi pokedexApi = PokedexApi();
+class PokemonService {
+  PokemonService(this.pokedexApi);
+
+  final PokemonApi pokedexApi;
 
   // Busca os 20 primeiros pokemons
-  static Future<List<Pokemon>> getPokemons(int offset, int length) async {
+  Future<List<Pokemon>> getPokemons(int offset, int length) async {
     // Lista de pokemons para retornar
     List<Pokemon> pokemons = [];
 
@@ -29,7 +31,7 @@ class PokedexService {
     return pokemons;
   }
 
-  static Future<PokemonDetails> getDetails(Pokemon pokemon) async {
+  Future<PokemonDetails> getDetails(Pokemon pokemon) async {
     var response = await pokedexApi.getDetails(int.parse(pokemon.id));
 
     // Verifica se a requisição foi bem sucedida

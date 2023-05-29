@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/data/models/pokemon.dart';
-import 'package:pokedex/app/ui/pages/home_page/widgets/background_card.dart';
-import 'package:pokedex/app/ui/pages/home_page/widgets/image_card.dart';
+import 'package:pokedex/app/modules/home/widget/background_card.dart';
+import 'package:pokedex/app/modules/home/widget/image_card.dart';
 
 /// PokemonCard
 ///

@@ -1,5 +1,5 @@
 import 'package:intl/intl.dart';
-import 'package:pokedex/app/const/app_images.dart';
+import '../../const/app_images.dart';
 
 class Pokemon {
   final String id;
@@ -24,4 +24,11 @@ class Pokemon {
       image: AppImages.getPokemonImage(id.toString()),
     );
   }
+
+  factory Pokemon.empty() => Pokemon(
+        id: '',
+        name: '',
+        url: '',
+        image: '',
+      );
 }

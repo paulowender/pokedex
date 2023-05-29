@@ -22,3 +22,9 @@ class AppImages {
     return 'https://nexus.traction.one/images/pokemon/pokemon/$id.png';
   }
 }
+
+enum AnimationDirection {
+  left,
+  right,
+  none,
+}

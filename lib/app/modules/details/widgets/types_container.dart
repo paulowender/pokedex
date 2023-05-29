@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/type_card.dart';
+
+import '../../../widget/generic_container.dart';
+import 'type_card.dart';
 
 /// TypeCard
 ///

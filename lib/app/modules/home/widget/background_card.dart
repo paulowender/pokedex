@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/app/const/app_themes.dart';
+
+import '../../../const/app_themes.dart';
 
 /// BackgroundCardHome
 ///

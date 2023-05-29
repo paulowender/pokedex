@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pokedex/app/const/app_texts.dart';
-import 'package:pokedex/app/const/app_themes.dart';
-import 'package:pokedex/app/const/sorting_option.dart';
-import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
+
+import '../../../const/app_texts.dart';
+import '../../../const/app_themes.dart';
+import '../../../const/sorting_option.dart';
+import '../../../widget/generic_container.dart';
 
 /// SortCard
 ///
