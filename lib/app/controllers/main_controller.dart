@@ -15,7 +15,7 @@ import '../routes/pages.dart';
 /// Gerencia o estado da aplicação
 class MainController extends GetxController {
   // Status da aplicação
-  AppState state = AppState.initial;
+  AppState state = AppState.loading;
 
   // Atualiza o estado para carregando
   void startLoading() {
