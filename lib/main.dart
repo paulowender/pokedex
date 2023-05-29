@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pokedex/app/const/app_themes.dart';
-import 'package:pokedex/app/routes/pages.dart';
+import 'app/const/app_themes.dart';
+import 'app/routes/pages.dart';
 
 void main() {
   runApp(const MyApp());

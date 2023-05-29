@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
+import 'package:pokedex/app/controllers/main_controller.dart';
 
-import '../controllers/main_controller.dart';
-
-class HomeBinding implements Bindings {
+class DetailsBinding implements Bindings {
   @override
   void dependencies() {
     Get.lazyPut<MainController>(() => MainController());

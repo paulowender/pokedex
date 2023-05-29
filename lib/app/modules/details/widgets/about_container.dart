@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pokedex/app/const/app_images.dart';
-import 'package:pokedex/app/const/app_texts.dart';
-import 'package:pokedex/app/const/app_themes.dart';
-import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
+
+import '../../../const/app_images.dart';
+import '../../../const/app_texts.dart';
+import '../../../const/app_themes.dart';
+import '../../../widget/generic_container.dart';
 
 /// Image Card
 ///

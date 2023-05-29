@@ -1,5 +1,5 @@
-import 'package:pokedex/app/data/models/pokemon_stats.dart';
-import 'package:pokedex/app/data/models/pokemon_type.dart';
+import 'pokemon_stats.dart';
+import 'pokemon_type.dart';
 
 class PokemonDetails {
   final List<PokemonType> types;

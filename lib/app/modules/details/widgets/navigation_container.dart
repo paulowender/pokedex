@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/app/const/app_images.dart';
-import 'package:pokedex/app/ui/global_widgets/containers/generic_container.dart';
+
+import '../../../const/app_images.dart';
+import '../../../widget/generic_container.dart';
 
 /// Navigation Container
 ///
@@ -21,7 +22,7 @@ class NavigationContainer extends GenericContainer {
           if (!controller.isFirst)
             IconButton(
               onPressed:
-                  controller.isFirst ? null : controller.toPreviousPokemon,
+                  controller.isFirst ? null : controller.showPreviousPokemon,
               icon: Image.asset(
                 AppImages.getImage('arrow_back_ios'),
                 // width: 16,
@@ -31,7 +32,7 @@ class NavigationContainer extends GenericContainer {
           Expanded(child: Container()),
           if (!controller.isLast)
             IconButton(
-              onPressed: controller.toNextPokemon,
+              onPressed: controller.showNextPokemon,
               icon: Image.asset(
                 AppImages.getImage('arrow_forward_ios'),
                 // width: 16,

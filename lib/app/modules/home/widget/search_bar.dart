@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pokedex/app/const/app_images.dart';
-import 'package:pokedex/app/const/app_texts.dart';
-import 'package:pokedex/app/const/app_themes.dart';
-import 'package:pokedex/app/controllers/home_controller.dart';
-import 'package:pokedex/app/ui/pages/home_page/widgets/sort_card.dart';
+
+import '../../../const/app_images.dart';
+import '../../../const/app_texts.dart';
+import '../../../const/app_themes.dart';
+import '../../../controllers/main_controller.dart';
+import 'sort_card.dart';
 
 /// PokemonCard
 ///
 /// Widget that displays a field with a search bar.
-class SearchField extends GetView<HomeController> {
+class SearchField extends GetView<MainController> {
   const SearchField({super.key});
 
   @override
@@ -18,7 +19,7 @@ class SearchField extends GetView<HomeController> {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       child: SizedBox(
         height: 32,
-        child: GetBuilder<HomeController>(builder: (controller) {
+        child: GetBuilder<MainController>(builder: (controller) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,

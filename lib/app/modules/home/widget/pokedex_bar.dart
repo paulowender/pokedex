@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pokedex/app/const/app_images.dart';
+
+import '../../../const/app_images.dart';
 
 /// PokedexBar
 ///

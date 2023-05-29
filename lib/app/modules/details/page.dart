@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pokedex/app/const/app_themes.dart';
-import 'package:pokedex/app/controllers/home_controller.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/back_container.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/details_container.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/image_container.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/navigation_container.dart';
-import 'package:pokedex/app/ui/pages/details/widgets/top_bar.dart';
+import 'package:pokedex/app/widget/animated_image.dart';
+
+import '../../const/app_themes.dart';
+import '../../controllers/main_controller.dart';
+import 'widgets/back_container.dart';
+import 'widgets/details_container.dart';
+import 'widgets/navigation_container.dart';
+import 'widgets/top_bar.dart';
 
 /// DetailsPage
 ///
 /// Page to show details of a pokemon.
-class DetailsPage extends GetView<HomeController> {
+class DetailsPage extends GetView<MainController> {
   const DetailsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Obx(
-      () => Padding(
-        padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-        child: Material(
+    return Padding(
+      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+      child: Obx(
+        () => Material(
           color: controller.details.value.types.first.color ??
               AppThemes.greyscaleWireframe,
           child: Stack(
@@ -37,7 +38,11 @@ class DetailsPage extends GetView<HomeController> {
                   // App Bar
                   TopBar(size: size),
                   // Image
-                  ImageContainer(size: size),
+                  AnimatedImage(
+                    image: controller.selectedPokemon.value.image,
+                    width: size.width * 0.54,
+                    direction: controller.direction.value,
+                  ),
                 ],
               )
             ],
