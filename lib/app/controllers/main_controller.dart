@@ -119,7 +119,9 @@ class MainController extends GetxController {
     details.value = await _pokedexService.getDetails(pokemon);
 
     if (openScreen) {
-      Get.toNamed(Routes.DETAILS, arguments: direction);
+      Get.toNamed(Routes.DETAILS, arguments: direction)?.then((value) {
+        changeDirection(AnimationDirection.none);
+      });
     }
   }
 

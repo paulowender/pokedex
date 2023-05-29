@@ -19,7 +19,6 @@ class AnimatedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(direction);
     return Hero(
       tag: image.hashCode,
       child: CachedNetworkImage(

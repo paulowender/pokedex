@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../const/app_texts.dart';
 import '../../../const/app_themes.dart';
 import '../../../widget/generic_container.dart';
 
@@ -89,33 +88,6 @@ class BaseStatsContainer extends GenericContainer {
           ),
         ],
       ),
-    );
-  }
-
-  Widget _caption(String text) {
-    return Text(
-      text,
-      style: AppTexts.caption,
-    );
-  }
-
-  Widget _values(String image, String text) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Image.asset(
-          image,
-          height: 14,
-          color: AppThemes.greyscaleDark,
-          fit: BoxFit.fill,
-        ),
-        const SizedBox(width: 8),
-        Text(
-          text,
-          style: AppTexts.body3,
-        )
-      ],
     );
   }
 }
