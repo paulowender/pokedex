@@ -7,17 +7,13 @@ void main() {
   test('MainController', () {
     expect(controller, isInstanceOf<MainController>());
   });
-  // setUp(controller.getNextRange);
-  test('Get pokemons', () async {
+
+  setUp(() async {
     await controller.getPokemons();
-    expect(controller.pokemons, hasLength(AppConsts.defaultPageSize));
   });
 
-  test('Get next range', () async {
-    final currentLength = controller.pokemons.length;
-    final nextLength = currentLength + AppConsts.defaultPageSize;
-    await controller.getNextRange();
-    expect(controller.pokemons, hasLength(nextLength));
+  test('Get pokemons', () async {
+    expect(controller.pokemons, hasLength(AppConsts.defaultPageSize));
   });
 
   test('Sort by name', () {
@@ -25,9 +21,30 @@ void main() {
     expect(controller.sortingByName, isTrue);
   });
 
+  test('First Pokemon by name', () async {
+    // await controller.getPokemons();
+    controller.sortByName();
+    expect(controller.pokemons, isNotEmpty);
+    expect(controller.pokemons.first.name, 'Beedrill');
+  });
+
   test('Sort by number', () {
     controller.sortByNumber();
     expect(controller.sortingByName, isFalse);
+  });
+
+  test('First Pokemon by number', () async {
+    // await controller.getPokemons();
+    controller.sortByNumber();
+    expect(controller.pokemons, isNotEmpty);
+    expect(controller.pokemons.first.id, '001');
+  });
+
+  test('Get next range', () async {
+    final currentLength = controller.pokemons.length;
+    final nextLength = currentLength + AppConsts.defaultPageSize;
+    await controller.getNextRange();
+    expect(controller.pokemons, hasLength(nextLength));
   });
 
   // Clean up
