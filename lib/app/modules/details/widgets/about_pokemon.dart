@@ -3,15 +3,15 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../const/app_images.dart';
-import '../../../const/app_texts.dart';
+import '../../../const/app_text_themes.dart';
 import '../../../const/app_themes.dart';
 import '../../../widget/generic_container.dart';
 
 /// Image Card
 ///
 /// Widget that displays details about a pokemon.
-class AboutContainer extends GenericContainer {
-  const AboutContainer({super.key, required super.size});
+class AboutPokemonWidget extends GenericContainer {
+  const AboutPokemonWidget({super.key, required super.size});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class AboutContainer extends GenericContainer {
                       children: [
                         const SizedBox(height: 12),
                         _values(
-                          AppImages.getImage('weight'),
+                          AppImages.getImageFromAsset('weight'),
                           '${controller.details.value.weight / 10} kg',
                         ),
                         const SizedBox(height: 12),
@@ -62,7 +62,7 @@ class AboutContainer extends GenericContainer {
                       const SizedBox(height: 12),
                       Obx(
                         () => _values(
-                          AppImages.getImage('height'),
+                          AppImages.getImageFromAsset('height'),
                           '${controller.details.value.height / 10} m',
                         ),
                       ),
@@ -87,7 +87,7 @@ class AboutContainer extends GenericContainer {
                               in controller.details.value.abilities)
                             Text(
                               ability,
-                              style: AppTexts.body3,
+                              style: AppTextThemes.body3,
                             ),
                         ],
                       ),
@@ -112,7 +112,7 @@ class AboutContainer extends GenericContainer {
   Widget _caption(String text) {
     return Text(
       text,
-      style: AppTexts.caption,
+      style: AppTextThemes.caption,
       textAlign: TextAlign.center,
     );
   }
@@ -131,7 +131,7 @@ class AboutContainer extends GenericContainer {
         const SizedBox(width: 8),
         Text(
           text,
-          style: AppTexts.body3,
+          style: AppTextThemes.body3,
         )
       ],
     );

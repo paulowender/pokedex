@@ -3,13 +3,13 @@ import 'package:get/get.dart';
 
 import '../../../const/app_status.dart';
 import '../../../controllers/main_controller.dart';
-import 'pokemon_card.dart';
+import 'pokemon.dart';
 import 'text_empty_list.dart';
 
-class ListPokemon extends StatelessWidget {
+class PokemonListWidget extends StatelessWidget {
   // final HomeController controller = Get.find<HomeController>();
 
-  const ListPokemon({super.key});
+  const PokemonListWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class ListPokemon extends StatelessWidget {
                       bottom: 0,
                     ),
                     itemCount: controller.pokemons.length,
-                    itemBuilder: (context, index) => PokemonCard(
+                    itemBuilder: (context, index) => PokemonWidget(
                       index: index,
                       pokemon: controller.pokemons[index],
                       onTap: () => controller.goToDetails(
@@ -57,7 +57,7 @@ class ListPokemon extends StatelessWidget {
                   ),
                 );
               default:
-                return const TextEmptyList();
+                return const EmptyListWidget();
             }
           },
         ),

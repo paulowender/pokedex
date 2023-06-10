@@ -6,8 +6,8 @@ import '../../../widget/generic_container.dart';
 /// Navigation Container
 ///
 /// Widget that displays navigation buttons
-class NavigationContainer extends GenericContainer {
-  const NavigationContainer({super.key, required super.size});
+class NavigationWidget extends GenericContainer {
+  const NavigationWidget({super.key, required super.size});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class NavigationContainer extends GenericContainer {
               onPressed:
                   controller.isFirst ? null : controller.showPreviousPokemon,
               icon: Image.asset(
-                AppImages.getImage('arrow_back_ios'),
+                AppImages.getImageFromAsset('arrow_back_ios'),
                 // width: 16,
               ),
               color: Colors.white,
@@ -34,7 +34,7 @@ class NavigationContainer extends GenericContainer {
             IconButton(
               onPressed: controller.showNextPokemon,
               icon: Image.asset(
-                AppImages.getImage('arrow_forward_ios'),
+                AppImages.getImageFromAsset('arrow_forward_ios'),
                 // width: 16,
               ),
               color: Colors.white,

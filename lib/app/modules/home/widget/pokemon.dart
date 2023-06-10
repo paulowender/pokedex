@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pokedex/app/const/app_themes.dart';
 import 'package:pokedex/app/data/models/pokemon.dart';
-import 'package:pokedex/app/modules/home/widget/background_card.dart';
-import 'package:pokedex/app/modules/home/widget/image_card.dart';
+import 'package:pokedex/app/modules/home/widget/background.dart';
+import 'package:pokedex/app/modules/home/widget/image.dart';
 
-/// PokemonCard
+/// PokemonWidget
 ///
 /// Widget that displays a list item.
-class PokemonCard extends StatelessWidget {
+class PokemonWidget extends StatelessWidget {
   final int index;
   final Pokemon pokemon;
   final void Function()? onTap;
 
-  const PokemonCard({
+  const PokemonWidget({
     Key? key,
     required this.index,
     required this.pokemon,
@@ -28,8 +28,8 @@ class PokemonCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(4),
         child: Stack(children: [
-          const BackgroundCardHome(),
-          ImageCard(image: pokemon.image),
+          const BackgroundHomeWidget(),
+          ImageWidget(image: pokemon.image),
           Padding(
             padding:
                 const EdgeInsets.only(left: 8, right: 8, bottom: 4, top: 4),

@@ -7,8 +7,8 @@ import '../../../widget/generic_container.dart';
 /// Back Container
 ///
 /// Widget that displays a pokeball at the top of the screen.
-class BackContainer extends GenericContainer {
-  const BackContainer({super.key, required super.size});
+class BackgrounPokeballWidget extends GenericContainer {
+  const BackgrounPokeballWidget({super.key, required super.size});
 
   @override
   Widget build(BuildContext context) {

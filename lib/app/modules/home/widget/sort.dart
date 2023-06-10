@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../const/app_texts.dart';
+import '../../../const/app_text_themes.dart';
 import '../../../const/app_themes.dart';
 import '../../../const/sorting_option.dart';
 import '../../../widget/generic_container.dart';
 
-/// SortCard
+/// SortWidget
 ///
 /// Widget that displays a sort option.
-class SortCard extends GenericContainer {
-  const SortCard({super.key, required super.size});
+class SortWidget extends GenericContainer {
+  const SortWidget({super.key, required super.size});
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: size.width * 0.3,
-      height: size.height * 0.2,
+      height: size.height * 0.22,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
@@ -35,7 +35,7 @@ class SortCard extends GenericContainer {
                 children: [
                   Text(
                     'Sort by:',
-                    style: AppTexts.subtitle2.copyWith(
+                    style: AppTextThemes.subtitle2.copyWith(
                       color: Colors.white,
                     ),
                     textAlign: TextAlign.left,
@@ -105,7 +105,7 @@ class SortCard extends GenericContainer {
           const SizedBox(width: 4),
           Text(
             title,
-            style: AppTexts.body3,
+            style: AppTextThemes.body3,
           ),
         ],
       ),

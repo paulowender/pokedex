@@ -4,9 +4,9 @@ import 'package:pokedex/app/widget/animated_image.dart';
 
 import '../../const/app_themes.dart';
 import '../../controllers/main_controller.dart';
-import 'widgets/back_container.dart';
-import 'widgets/details_container.dart';
-import 'widgets/navigation_container.dart';
+import 'widgets/background_pokeball.dart';
+import 'widgets/details.dart';
+import 'widgets/navigation.dart';
 import 'widgets/top_bar.dart';
 
 /// DetailsPage
@@ -27,16 +27,16 @@ class DetailsPage extends GetView<MainController> {
           child: Stack(
             children: [
               // Background Container
-              BackContainer(size: size),
+              BackgrounPokeballWidget(size: size),
               // Details Card
-              DetailsContainer(size: size),
+              DetailsWidget(size: size),
               // Navigation bottons
-              NavigationContainer(size: size),
+              NavigationWidget(size: size),
               // Column with Top Bar and Image
               Column(
                 children: [
                   // App Bar
-                  TopBar(size: size),
+                  TopBarWidget(size: size),
                   // Image
                   AnimatedImage(
                     image: controller.selectedPokemon.value.image,

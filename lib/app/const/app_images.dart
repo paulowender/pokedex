@@ -9,7 +9,7 @@ class AppImages {
   static const String sortByNumber = '$images/sort_by_number.png';
 
   // Função responsável por retornar uma imagem
-  static String getImage(String name) {
+  static String getImageFromAsset(String name) {
     // Monta o caminho da imagem
     String path = '$images/$name.png';
 
@@ -17,7 +17,7 @@ class AppImages {
   }
 
   // Função responsável por retornar uma imagem da pasta pokemons
-  static String getPokemonImage(String id) {
+  static String getPokemonImageUrl(String id) {
     // Monta o caminho da imagem
     return 'https://nexus.traction.one/images/pokemon/pokemon/$id.png';
   }

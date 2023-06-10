@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../const/app_images.dart';
-import '../../../const/app_texts.dart';
+import '../../../const/app_text_themes.dart';
 import '../../../const/app_themes.dart';
 import '../../../controllers/main_controller.dart';
-import 'sort_card.dart';
+import 'sort.dart';
 
 /// PokemonCard
 ///
 /// Widget that displays a field with a search bar.
-class SearchField extends GetView<MainController> {
-  const SearchField({super.key});
+class SearchFieldWidget extends GetView<MainController> {
+  const SearchFieldWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +27,10 @@ class SearchField extends GetView<MainController> {
               Expanded(
                 child: TextField(
                   controller: controller.searchController,
-                  style: AppTexts.body3,
+                  style: AppTextThemes.body3,
                   decoration: InputDecoration(
                     hintText: 'Search',
-                    hintStyle: AppTexts.body3,
+                    hintStyle: AppTextThemes.body3,
                     fillColor: AppThemes.white,
                     filled: true,
                     prefixIcon: const Icon(
@@ -94,7 +94,7 @@ class SearchField extends GetView<MainController> {
       context: context,
       builder: (BuildContext context) {
         return Center(
-          child: SortCard(size: MediaQuery.of(context).size),
+          child: SortWidget(size: MediaQuery.of(context).size),
         );
       },
     );

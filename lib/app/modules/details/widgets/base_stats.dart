@@ -8,8 +8,8 @@ import '../../../widget/generic_container.dart';
 /// Base stats container
 ///
 /// Widget that displays base stats list of pokemon.
-class BaseStatsContainer extends GenericContainer {
-  const BaseStatsContainer({super.key, required super.size});
+class BaseStatsWidget extends GenericContainer {
+  const BaseStatsWidget({super.key, required super.size});
 
   @override
   Widget build(BuildContext context) {

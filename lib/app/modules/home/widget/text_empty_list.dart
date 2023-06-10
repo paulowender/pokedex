@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 
 import '../../../controllers/main_controller.dart';
 
-class TextEmptyList extends GetView<MainController> {
-  const TextEmptyList({super.key});
+class EmptyListWidget extends GetView<MainController> {
+  const EmptyListWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
