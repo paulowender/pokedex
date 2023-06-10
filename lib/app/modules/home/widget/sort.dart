@@ -15,7 +15,7 @@ class SortWidget extends GenericContainer {
   Widget build(BuildContext context) {
     return SizedBox(
       width: size.width * 0.3,
-      height: size.height * 0.2,
+      height: size.height * 0.22,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
