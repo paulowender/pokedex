@@ -3,14 +3,14 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../const/app_images.dart';
-import '../../../const/app_texts.dart';
+import '../../../const/app_text_themes.dart';
 import '../../../widget/generic_container.dart';
 
 /// TopBar
 ///
 /// Widget that shows the top bar of the screen.
-class TopBar extends GenericContainer {
-  const TopBar({super.key, required super.size});
+class TopBarWidget extends GenericContainer {
+  const TopBarWidget({super.key, required super.size});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class TopBar extends GenericContainer {
               InkWell(
                 onTap: Get.back,
                 child: Image.asset(
-                  AppImages.getImage('arrow_back'),
+                  AppImages.getImageFromAsset('arrow_back'),
                   width: 40,
                   color: Colors.white,
                 ),
@@ -52,7 +52,7 @@ class TopBar extends GenericContainer {
                 () => Text(
                   '#${controller.selectedPokemon.value.id}',
                   textAlign: TextAlign.right,
-                  style: AppTexts.subtitle2.copyWith(
+                  style: AppTextThemes.subtitle2.copyWith(
                     color: Colors.white,
                   ),
                 ),

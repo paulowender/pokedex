@@ -1,4 +1,5 @@
 import 'package:intl/intl.dart';
+
 import '../../const/app_images.dart';
 
 class Pokemon {
@@ -21,7 +22,7 @@ class Pokemon {
       id: idx,
       name: json['name'][0].toUpperCase() + json['name'].substring(1),
       url: json['url'],
-      image: AppImages.getPokemonImage(id.toString()),
+      image: AppImages.getPokemonImageUrl(id.toString()),
     );
   }
 

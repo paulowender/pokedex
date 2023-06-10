@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../const/app_images.dart';
 
-/// PokedexBar
+/// PokedexBarWidget
 ///
 /// Widget that displays an image.
-class PokedexBar extends StatelessWidget {
-  const PokedexBar({super.key});
+class PokedexBarWidget extends StatelessWidget {
+  const PokedexBarWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return Padding(

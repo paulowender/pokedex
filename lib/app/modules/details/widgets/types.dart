@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../../widget/generic_container.dart';
-import 'type_card.dart';
+import 'type.dart';
 
 /// TypeCard
 ///
 /// Widget that displays a list of types
-class TypesContainer extends GenericContainer {
-  const TypesContainer({super.key, required super.size});
+class TypesWidget extends GenericContainer {
+  const TypesWidget({super.key, required super.size});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class TypesContainer extends GenericContainer {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: controller.details.value.types
-            .map((type) => TypeCard(type))
+            .map((type) => TypeWidget(type))
             .toList(),
       ),
     );

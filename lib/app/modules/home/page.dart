@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controllers/main_controller.dart';
-import 'widget/list_pokemon.dart';
 import 'widget/pokedex_bar.dart';
-import 'widget/search_bar.dart';
+import 'widget/pokemon_list.dart';
+import 'widget/search_field.dart';
 
 /// Home Page
 ///
@@ -26,9 +26,9 @@ class HomePage extends GetView<MainController> {
         child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            PokedexBar(),
-            SearchField(),
-            ListPokemon(),
+            PokedexBarWidget(),
+            SearchFieldWidget(),
+            PokemonListWidget(),
           ],
         ),
       ),

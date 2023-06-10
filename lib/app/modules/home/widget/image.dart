@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/app/widget/animated_image.dart';
 
-/// ImageCard
+/// ImageWidget
 ///
 /// Widget that displays an image.
-class ImageCard extends StatelessWidget {
+class ImageWidget extends StatelessWidget {
   final String image;
-  const ImageCard({super.key, required this.image});
+  const ImageWidget({super.key, required this.image});
   @override
   Widget build(BuildContext context) {
     return Center(

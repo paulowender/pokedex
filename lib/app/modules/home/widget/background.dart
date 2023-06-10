@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../const/app_themes.dart';
 
-/// BackgroundCardHome
+/// BackgroundHomeWidget
 ///
 /// Widget to display a background card of the list items.
-class BackgroundCardHome extends StatelessWidget {
-  const BackgroundCardHome({super.key});
+class BackgroundHomeWidget extends StatelessWidget {
+  const BackgroundHomeWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(

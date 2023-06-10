@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import '../const/sorting_option.dart';
+import '../data/models/pokemon.dart';
 import '../data/models/pokemon_details.dart';
 
-import '../data/models/pokemon.dart';
-
-abstract class IHomeController {
+abstract class IController {
   // Controller para o scroll
   late ScrollController scrollController;
 

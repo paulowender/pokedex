@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pokedex/app/data/models/pokemon_type.dart';
 
-/// TypeCard
+/// TypeWidget
 ///
 /// Widget that displays a list of types.
-class TypeCard extends StatelessWidget {
+class TypeWidget extends StatelessWidget {
   final PokemonType type;
-  const TypeCard(
+  const TypeWidget(
     this.type, {
     Key? key,
   }) : super(key: key);

@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../../../const/app_themes.dart';
 import '../../../widget/generic_container.dart';
-import 'about_container.dart';
-import 'base_stats_container.dart';
-import 'types_container.dart';
+import 'about_pokemon.dart';
+import 'base_stats.dart';
+import 'types.dart';
 
 /// Details Container
 ///
 /// Widget that displays all details of a pokemon.
-class DetailsContainer extends GenericContainer {
-  const DetailsContainer({super.key, required super.size});
+class DetailsWidget extends GenericContainer {
+  const DetailsWidget({super.key, required super.size});
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +33,13 @@ class DetailsContainer extends GenericContainer {
         child: Column(
           children: [
             // Container with Types
-            TypesContainer(size: size),
+            TypesWidget(size: size),
             // Container with About Data
-            AboutContainer(size: size),
+            AboutPokemonWidget(size: size),
             // Simulate the description spacing
             const Spacer(),
             // Container with Base Stats
-            BaseStatsContainer(size: size),
+            BaseStatsWidget(size: size),
           ],
         ),
       ),

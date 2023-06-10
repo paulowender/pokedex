@@ -13,7 +13,7 @@ class PokemonService {
     List<Pokemon> pokemons = [];
 
     // Busca os 20 primeiros pokemons
-    var response = await pokedexApi.getPokemons(offset: offset);
+    var response = await pokedexApi.getPokemons(offset: offset, limit: length);
 
     // Verifica se a requisição foi bem sucedida
     if (response.statusCode == 200) {
